@@ -36,5 +36,11 @@ def divide(x: int, y: int) -> float:
     return x / y
 
 
+@jsonrpc.method("App.pow")
+def pow_(x: int, y: int) -> int:
+    """Return x ** y."""
+    return x**y
+
+
 if __name__ == "__main__":
     app.run(debug=True)
